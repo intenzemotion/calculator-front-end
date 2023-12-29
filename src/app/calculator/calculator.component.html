@@ -1,0 +1,46 @@
+<div>
+  <h2>Calculator</h2>
+  <form>
+
+    <!-- operation dropdown -->
+    <label for="operation">Operation:</label>
+    <select id="operation" name="operation" [(ngModel)]="operation" required>
+      <option value="add">Add</option>
+      <option value="subtract">Subtract</option>
+      <option value="multiply">Multiply</option>
+      <option value="divide">Divide</option>
+    </select>
+
+    <br>
+
+    <!-- value and unit #1 -->
+    <label for="value1">Value 1:</label>
+    <input type="number" id="value1" name="value1" [(ngModel)]="value1" required>
+    <label for="unit1">Unit 1:</label>
+    <select id="unit1" name="unit1" [(ngModel)]="unit1" required>
+      <option value="meter">Meter</option>
+      <option value="yard">Yard</option>
+    </select>
+
+    <br>
+
+    <!-- value and unit #2 -->
+    <label for="value2">Value 2:</label>
+    <input type="number" id="value2" name="value2" [(ngModel)]="value2" required>
+    <label for="unit2">Unit 2:</label>
+    <select id="unit2" name="unit2" [(ngModel)]="unit2" required>
+      <option value="meter">Meter</option>
+      <option value="yard">Yard</option>
+    </select>
+
+    <br>
+
+    <!-- calculate button -->
+    <button type="button" (click)="calculate()">Calculate</button>
+  </form>
+
+  <!-- result here -->
+  <div *ngIf="result !== undefined">
+    <p>Result: {{ result }}</p>
+  </div>
+</div>

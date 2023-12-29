@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule, // to work with forms
   ],
   providers: [],
   bootstrap: [AppComponent]
