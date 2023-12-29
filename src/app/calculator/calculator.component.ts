@@ -16,6 +16,28 @@ export class CalculatorComponent {
   operation: string;
   result: number;
 
-  constructor() { }
+  constructor(private calculatorService: CalculatorService) { }
 
+  calculate() {
+
+    // we get all the value and put them into an object, for now we call it "request"
+    const request: Calculator = {
+      id: null,
+      result: null,
+      value1: this.value1,
+      unit1: this.unit1,
+      value2: this.value2,
+      unit2: this.unit2,
+      operation: this.operation
+    };
+
+    this.calculatorService.calculate(request).subscribe(
+      response => {
+        this.result = response.result;
+      },
+      error => {
+        console.error('Error calculating:', error);
+      }
+    );
+  }
 }
