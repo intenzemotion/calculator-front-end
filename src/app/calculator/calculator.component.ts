@@ -14,6 +14,7 @@ export class CalculatorComponent {
   value2: number;
   unit2: string;
   operation: string;
+  outputUnit: string;
   result: number;
 
   constructor(private calculatorService: CalculatorService) { }
@@ -28,7 +29,8 @@ export class CalculatorComponent {
       unit1: this.unit1,
       value2: this.value2,
       unit2: this.unit2,
-      operation: this.operation
+      outputUnit: this.outputUnit,
+      operation: this.operation,
     };
 
     this.calculatorService.calculate(request).subscribe(
