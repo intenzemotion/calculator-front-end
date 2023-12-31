@@ -5,6 +5,7 @@ export interface Calculator {
     unit1: string;
     value2: number;
     unit2: string;
+    outputUnit: string;
     operation: string;
     result: number;
 }
