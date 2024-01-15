@@ -1,6 +1,6 @@
 # Calculator App
 
-This project is a front-end application for the **Calculator of Unit Measurement** provided [here](https://github.com/intenzemotion/calculator-back-end), offering a user interface for performing basic operations on values in meters and yards. Currently the output will be provided in meters for now.
+This project is a front-end application for the **Calculator of Unit Measurement** provided [here](https://github.com/intenzemotion/calculator-back-end), offering a user interface for performing basic operations on values in meters and yards. Currently the output will be provided in meters and yards.
 
 ## Development Environment
 
